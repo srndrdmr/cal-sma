@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      img {
+        transition: 0.1s;
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <p id="o">Titreme</p>
+    <img
+      id="resim"
+      src="resimler/buket-cicek_1.jpg"
+      alt="terre"
+      width="400"
+      height="400"
+    />
+    <script>
+      let res = document.getElementById("resim");
+      setInterval(() => {
+        res.style.transform = `translate(${rast(3)}px,${rast(
+          3
+        )}px) rotate(${rast(2)}deg)`;
+      }, 50);
+      function rast(d) {
+        let deger = Math.round(Math.random() * d);
+        if (deger != 0) {
+          return (Math.round(Math.random()) == 0 ? -1 : 1) * deger;
+        }
+        return 0;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Selam SERROOOO!!!</h2>
+
+    <p id="demo">JavaScript öğreniyorum</p>
+    <button id="dugme" type="button" onclick="GosterGizle(this.innerHTML)">
+      Gizle
+    </button>
+    <script>
+      function GosterGizle(durum) {
+        if (durum == "Gizle") {
+          document.getElementById("demo").style.display = "none";
+          document.getElementById("dugme").innerHTML = "Göster";
+        } else {
+          document.getElementById("demo").style.display = "block";
+          document.getElementById("dugme").innerHTML = "Gizle";
+        }
+      }
+    </script>
+  </body>
+</html>

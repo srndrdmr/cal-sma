@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+        --sari: goldenrod;
+        --beyaz: white;
+        --divarkasi: #333;
+        --hover: #0000;
+        --kirikbeyaz: #f1f1f1;
+        --navbar: #ddd;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .header {
+        padding: 30px;
+        text-align: center;
+        background: var(--sari);
+      }
+      .navbar {
+        display: flex;
+        background-color: #333;
+      }
+      .navbar a {
+        text-decoration: none;
+        color: var(--beyaz);
+        text-align: center;
+        padding: 16px 20px;
+      }
+      .navbar a:hover {
+        background-color: var(--navbar);
+        color: black;
+      }
+      #main {
+        display: flex;
+      }
+      #sidebar {
+        flex: 30%;
+        padding: 10px;
+        background-color: #5f5d5d;
+      }
+      #content {
+        flex: 70%;
+        order: -1;
+        padding: 10px;
+      }
+      .yt {
+        background-color: #aaa;
+        margin-bottom: 20px;
+        width: 100%;
+        padding: 20px;
+      }
+      p {
+        margin: 10px 0px;
+      }
+      #footer {
+        background-color: var(--sari);
+        text-align: center;
+        padding: 20px;
+        color: var(--kirikbeyaz);
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Lorem ipsum dolor sit amet.</h1>
+      <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <div class="navbar">
+      <a href="">link1</a>
+      <a href="">link2</a>
+      <a href="">link3</a>
+      <a href="">link4</a>
+    </div>
+    <div id="main">
+      <div id="sidebar">
+        <div class="kutu">
+          <h1>Lorem ipsum dolor sit amet.</h1>
+          <div class="yt" style="height: 200px"></div>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga atque
+            commodi adipisci nulla quis perferendis eum reiciendis libero quo?
+            Totam!
+          </p>
+          <div class="yt" style="height: 50px"></div>
+          <div class="yt" style="height: 50px"></div>
+          <div class="yt" style="height: 50px"></div>
+        </div>
+      </div>
+
+      <div id="content">
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <div class="yt" style="height: 200px"></div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, vero
+          minus maiores quod ad dolorum!
+        </p>
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <div class="yt" style="height: 200px"></div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, vero
+          minus maiores quod ad dolorum!
+        </p>
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <div class="yt" style="height: 200px"></div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, vero
+          minus maiores quod ad dolorum!
+        </p>
+      </div>
+    </div>
+    <div id="footer">Lorem ipsum dolor sit amet.</div>
+  </body>
+</html>

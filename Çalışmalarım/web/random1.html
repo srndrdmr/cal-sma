@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <script>
+      let sayilar = [];
+      for (let i = 1; i <= 100; i++) {
+        let ras = Math.ceil(Math.random() * 10);
+        sayilar.push(ras);
+      }
+      let sayac = 0;
+      for (let i = 1; i <= 10; i++) {
+        let sayac = 0;
+        for (let sayi of sayilar) {
+          if (sayi == i) sayac++;
+        }
+        document.getElementById(
+          "demo"
+        ).innerHTML += `<p style="margin=0;"> ${i} den ${sayac} tane var</p>`;
+      }
+    </script>
+  </body>
+</html>

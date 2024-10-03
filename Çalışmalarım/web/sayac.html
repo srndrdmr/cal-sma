@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #div1 {
+        width: 200px;
+        line-height: 200px;
+        top: 50%;
+        left: 50%;
+        background-color: pink;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-size: 40px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <input
+      type="range"
+      value="0"
+      min="0"
+      max="100"
+      step="1"
+      id="buyut"
+      oninput="Buyutme()"
+    />
+    <div id="div1">0</div>
+    <script>
+      Buyutme();
+      function Buyutme() {
+        let arttir = document.getElementById("buyut").value;
+        let divim = document.getElementById("div1");
+        divim.innerHTML = arttir;
+        divim.style.borderRadius = arttir / 2 + "%";
+      }
+    </script>
+  </body>
+</html>

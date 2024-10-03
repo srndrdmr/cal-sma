@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    Sayı gir: <input type="text" id="sayi" size="4" />
+    <select id="tabanlar" onchange="Cevir()"></select>
+    <button onclick="Cevir()">Çevir</button>
+    Sonuç:<span id="sonuc"></span>
+    <p id="rgb"></p>
+
+    <script>
+      let liste = "";
+      for (let i = 2; i < 37; i++) {
+        liste += `<option>${i}</option>`;
+      }
+      document.getElementById("tabanlar").innerHTML = liste;
+      function Cevir() {
+        let sayim = parseInt(document.getElementById("sayi").value);
+        let taban = parseInt(document.getElementById("tabanlar").value);
+        document.getElementById("sonuc").innerHTML = sayim.toString(taban);
+
+        let yazi_rengi = HEX();
+        let zemin_rengi = RGB();
+        document.body.style.color = yazi_rengi;
+        document.body.style.backgroundColor = zemin_rengi;
+        document.getElementById("rgb").innerHTML =
+          yazi_rengi + " " + zemin_rengi;
+      }
+      function RGB() {
+        return `rgb(${rast()},${rast()},${rast()})`;
+      }
+      function HEX() {
+        return `#${rast().toString(16)}${rast().toString(16)}${rast().toString(
+          16
+        )}`;
+      }
+      function rast() {
+        return Math.floor(Math.random() * 256);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    #ana{
+        position: absolute;
+        background-color:rgb(48, 138, 201);
+        width: 240px;
+        height: 240px;
+        left: calc(50% - 120px); 
+        top: calc(50% - 120px);         
+        border-radius: 50%;
+        
+       }
+          .kutu{
+            left: 50%;
+            top: 50%;
+            position: absolute;
+            transform-origin: 0 50%;
+            transform: translate(-50% -50%);
+            /* transition: .3s; */
+            box-shadow: 0 0 2px;
+        }
+        #san{
+            background-color: blueviolet;
+            width: 100px;
+            height: 2px;
+        }
+        #dak{
+            background-color: rgb(191, 28, 17);
+            width: 80px;
+            height: 8px;
+        }
+        #saa{
+            background-color: rgb(191, 28, 17);
+            width: 60px;
+            height: 8px;
+        }
+        #daire{
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: black;
+        }
+    
+
+    </style>
+</head>
+<body>
+    <div id="ana">
+        <div id="saa" class="kutu"></div>
+        <div id="dak" class="kutu"></div>
+        <div id="san" style="margin-top:3px" class="kutu"></div>
+        <div id="daire" class="kutu" style="margin-top:-4px;margin-left: -8px;"></div>
+    </div>
+   
+    
+<script>
+    let saniye,dakika,saat,zaman;
+    
+    setInterval(()=>{
+        zaman=new Date();
+        saniye=zaman.getSeconds()*6-90;
+        dakika=zaman.getMinutes()*6-90;
+        saat=zaman.getHours()*30-90;
+        san.style.transform="rotate("+saniye+"deg)";
+        dak.style.transform="rotate("+dakika+"deg)";
+        saa.style.transform="rotate("+saat+"deg)";
+    },1000);
+
+</script>
+</body>
+</html>

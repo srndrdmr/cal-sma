@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="sonuc"></h1>
+    <script>
+      let ay_sayisi = new Date().getMonth();
+      switch (ay_sayisi) {
+        case 11:
+        case 0:
+        case 1:
+          mevsim = "Kış";
+          break;
+
+        case 2:
+        case 3:
+        case 4:
+          mevsim = "ilkbahar";
+          break;
+        case 5:
+        case 6:
+        case 7:
+          mevsim = "yaz";
+          break;
+        case 8:
+        case 9:
+        case 10:
+          mevsim = "Sonbahar";
+          break;
+      }
+
+      document.getElementById("sonuc").innerHTML = `${
+        ay_sayisi + 1
+      } aydayiz: Mevsim ${mevsim}.`;
+    </script>
+  </body>
+</html>

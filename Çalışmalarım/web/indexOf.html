@@ -1,0 +1,16 @@
+<html>
+  <body>
+    <script>
+      let metin = "Şevi bugün hava sıcak";
+      let aranan = prompt("Arananı girin:", "");
+      let index = metin.indexOf(aranan);
+      if (index != -1) {
+        alert("bulundu konumu " + index);
+      } else {
+        alert(aranan + " bulunamadı");
+      }
+
+      document.getElementById("demo").innerHTML = index;
+    </script>
+  </body>
+</html>

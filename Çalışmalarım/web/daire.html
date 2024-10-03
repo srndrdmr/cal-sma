@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #daire {
+        position: absolute;
+        color: azure;
+        text-shadow: 0 0 2px 3px rgb(122, 39, 39);
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+        text-align: center;
+        border: 2px solid;
+        border-radius: 50%;
+        background-image: url(resimler/1.jpg);
+        background-repeat: no-repeat;
+        box-shadow: 0px 0px 3px 3px rgb(212, 103, 103);
+
+        /* ortalama */
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </head>
+  <body>
+    <p style="text-align: center">
+      <input
+        type="range"
+        id="boyut"
+        min="1"
+        max="4"
+        step="0.1"
+        value="1"
+        oninput="Degistir()"
+      />
+    </p>
+    <div id="daire">SEROO</div>
+    <script>
+      function Degistir() {
+        let d = document.getElementById("daire");
+        let deger = parseFloat(document.getElementById("boyut").value);
+
+        d.style.transform = `scale(${deger})`;
+      }
+    </script>
+  </body>
+</html>

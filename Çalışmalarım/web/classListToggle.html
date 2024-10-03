@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .bicim {
+        font-size: 80px;
+        background-color: lightcoral;
+        color: black;
+        text-align: center;
+        transition: 2s;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="kutu">Seren</div>
+    <button onclick="degistir()">Değiştir</button>
+    <script>
+      function degistir() {
+        let etiket = document.getElementById("kutu").classList.toggle("bicim");
+      }
+    </script>
+  </body>
+</html>

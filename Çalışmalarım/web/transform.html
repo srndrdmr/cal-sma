@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* .kutu{
+            padding: 10px;
+background-color: grey;
+display: inline-block;
+transform: 0.5;
+        }
+        .kutu:hover{
+            transform: scale(1.2);
+            z-index: 10;
+        } */
+
+        /* ----------------------------------------- */
+
+
+        .kutu{
+            padding: 15px;
+            background-color: indianred;
+            float: left;
+            width: 50px;
+            transition: 0.5s;
+            text-align: center;
+        }
+        .kutu:hover{
+            margin: 0 10px;
+            width: 70px;
+        }
+        #ana{
+            background-color: darksalmon;
+        }
+
+        #ana::after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+
+</head>
+<body>
+<div id="ana">
+    <div class="kutu">kutu1</div>
+    <div class="kutu">kutu2</div>
+    <div class="kutu">kutu3</div>
+    <div class="kutu">kutu4</div>
+</div>
+</body>
+</html>

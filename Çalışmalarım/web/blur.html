@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input
+      type="range"
+      id="blur"
+      min="0"
+      max="10"
+      value="0"
+      step="1"
+      oninput="Blur()"
+    />
+    <img id="resim" src="resimler/cicek-3.jpg" width="250px" height="250px" />
+    <script>
+      function Blur() {
+        let resim = document.getElementById("resim");
+        let deger = document.getElementById("blur").value;
+        resim.style.filter = `blur(${deger}px)`;
+      }
+    </script>
+  </body>
+</html>

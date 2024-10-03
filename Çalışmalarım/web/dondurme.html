@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        #kutu {
+            position: relative;
+            width: 100px;
+            height: 20px;
+            background-color: brown;
+            text-align: center;
+            color: white;
+            left: 25px;
+            top: 65px;
+            transform: translate(-50%, -50%);
+        }
+
+        #daire {
+            width: 150px;
+            height: 150px;
+            background-color: aquamarine;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="daire">
+        <div id="kutu"></div>
+    </div>
+
+    <script>
+        let aci = 0;
+        setInterval(() => {
+            document.getElementById("kutu").style.transform = `rotate(${aci += 5}deg)`;
+            document.getElementById("kutu").innerHTML = aci + "&deg;";
+            if (aci == 360) aci = 0;
+        }, 100);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <select
+      size="4"
+      name="turkce"
+      id="turkce"
+      onchange="Degisti(this.value)"
+    ></select>
+    <span id="kurtce"></span>
+    <script>
+      let sozluk = new Map([
+        ["elma", "sev"],
+        ["armut", "hermi"],
+        ["karpuz", "zıbeş"],
+        ["kiraz", "heresi"],
+        ["siyah", "reş"],
+        ["tavuk", "mırışk"],
+      ]);
+      sozluk.set("su", "av");
+      let liste = "";
+      for (const kelime of sozluk.keys()) {
+        liste += `<option>${kelime}</option>`;
+      }
+      document.getElementById("turkce").innerHTML = liste;
+
+      function Degisti(deger) {
+        document.getElementById("kurtce").innerHTML = sozluk.get(deger);
+      }
+    </script>
+  </body>
+</html>
